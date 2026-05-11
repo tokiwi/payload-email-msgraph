@@ -1,8 +1,19 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "references": [{ "path": "../payload" }],
   "compilerOptions": {
+    "strict": true,
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "outDir": "dist",
+    "rootDir": "src",
+    "declaration": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
     // Do not include DOM and DOM.Iterable as this is a server-only package.
     "lib": ["ES2022"],
-  }
+    "types": ["node"]
+  },
+  "include": ["src"],
+  "exclude": ["**/*.spec.ts"]
 }
